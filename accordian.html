@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"  >
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; Samar Maharaj has created accordion on 16th April 2021." />
+  <meta name="keywords" content="samarmaharaj, samar Maharaj, github, Accordion" />
+  <title>Accordion</title>
+  <style type="text/css">
+    .accordion
+    {
+      background-color : #eee;
+      padding : 16px;
+      font-size : 16px;
+      outline : none;
+      border : none;
+      transition : 0.4s;
+      text-align : left;
+      cursor : pointer;
+      color : #444;
+    }
+    
+    .active, .accordion:hover
+    {
+      background-color : #ccc;
+    }
+    
+    .panel
+    {
+      font-size : 16px;
+      padding : 0 16px;
+      max-height : 0px;
+      transition : max-height 0.2s ease-out;
+      background-color : white;
+      overflow : hidden;
+    }
+    
+    .accordion:after
+    {
+      content : "\02795";
+      float : right;
+      color : #777;
+      margin : 5px;
+      font-size  : 10px;
+      font-weight : bold;
+    }
+    
+    .active:after
+    {
+      content : "\02796";
+    }
+  </style>
+</head>
+<body>
+  <div class="accordion" > Practical Rockery </div>
+  <div class="panel" >
+    <p> Today, rockets are much more reliable. They 
+      fly on precise courses and are capable of 
+      going fast enough to escape the gravita-
+      tional pull of the Earth. Modern rockets are 
+      also more efficient today because we have 
+      an understanding of the scientific principles 
+      behind rocketry. Our understanding has led 
+      us to develop a wide variety of advanced 
+      rocket hardware and devise new propellants 
+      that can be used for longer trips and more 
+      powerful take offs.</p>
+  </div>
+    
+  <div class="accordion" > Rocket Engines and Their Propellants </div>
+  <div class="panel" >
+      <p> Most rockets today operate with either solid 
+        or liquid propellants. The word propellant 
+        does not mean simply fuel, as you might 
+        think; it means both fuel and oxidizer. The 
+        fuel is the chemical the rocket burns but, for 
+        burning to take place, an oxidizer (typically 
+        oxygen) must be present. Jet engines draw 
+        oxygen into their engines from the surround-
+        ing air. Rockets do not have the luxury that 
+        jet planes have; they must carry the oxidizer 
+        with them into space where there is no air.</p>
+   </div>
+      
+   <div class="accordion" > Continue to read </div>
+   <div class="panel" >
+          <p> In the following discussion about rocket 
+          propulsion, several terms appear to be used 
+          synonymously, but actually have distinct 
+          meanings. These terms are rocket, rocket 
+          motor and rocket engine. In simple terms, 
+          a rocket is a vehicle that contains every-
+          thing needed to place a payload into space. 
+          Rocket motors and rocket engines are 
+          propulsion devices that produce the thrust 
+          necessary to lift a rocket into space. A rocket 
+          motor is a simple device that converts stored 
+          rocket propellant into hot gases to produce 
+          thrust, such as a solid rocket motor. A rocket 
+          engine is a more complicated machine with 
+          moving parts that converts stored rocket 
+          propellants into hot gases to produce thrust. 
+          An example of a rocket engine is a liquid-
+          propellant engine, which is a machine with 
+          valves and often pumps that performs the 
+          energy conversion to generate thrust.</p>
+   </div>
+   <script type="text/javascript">
+   var acc = document.getElementsByClassName("accordion");
+   for ( var a = 0; a < acc.length; a++ ) {
+     acc[a].addEventListener("click", function() {
+       this.classList.toggle("active");
+       var panel = this.nextElementSibling;
+       if(panel.style.maxHeight){
+         panel.style.maxHeight = null;
+       }  else {
+         panel.style.maxHeight = panel.scrollHeight + "px";
+       }
+     });
+   };
+   </script> 
+</body>
+</html>
